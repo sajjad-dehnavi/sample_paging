@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--Load More-->
+    <ProgressBar
+        android:id="@+id/loadMore"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_circle_white"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Error-->
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/loadMore"
+        app:layout_constraintStart_toStartOf="@id/loadMore"
+        app:layout_constraintTop_toBottomOf="@id/loadMore"
+        android:text="Ops!! please try again!" />
+    <!--Retry-->
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Retry"
+        android:id="@+id/btnRetry"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:cornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtError" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
